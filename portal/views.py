@@ -6,3 +6,6 @@ def index(request):
         request,
         'templates/portal/index.html'
     )
+
+def cadastro(request):
+    return render(request, 'cadastro.html')

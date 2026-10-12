@@ -22,6 +22,8 @@ INSTALLED_APPS = [
     # ERRO ENCONTRADO: o app portal não estava registrado no projeto
     # CORREÇÃO: adicionado 'portal' para que o Django carregue o app
     'portal',
+    'sistema',
+    # KARAM : Sistema também não estava cadastrado como aplicação. 
 ]
 
 MIDDLEWARE = [

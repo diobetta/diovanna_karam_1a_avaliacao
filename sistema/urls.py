@@ -1,11 +1,9 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from portal import views
 
 urlpatterns = [
     path('admin/', admin.site.urls), # DIOVANNA -> está correto 
     # path('cadastro/', preciso mostrar a página cadastro.html),
-    # DIOVANNA 
-    # ERRO ENCONTRADO: havia texto em linguagem natural dentro do path, causando SyntaxError
-    # CORREÇÃO: removida a rota duplicada de cadastro e utilizado include() para chamar as URLs do app portal
-    path('', include('portal.urls')),
-]
+    # KARAM: essa url estava duplicada? foi mantida so em portal.urls. ps: não há cadastro.html. foi criada uma view generica
+    ]
