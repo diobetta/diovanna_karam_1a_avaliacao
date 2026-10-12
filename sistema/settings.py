@@ -17,6 +17,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # DIOVANNA
+    # ERRO ENCONTRADO: o app portal não estava registrado no projeto
+    # CORREÇÃO: adicionado 'portal' para que o Django carregue o app
+    'portal',
 ]
 
 MIDDLEWARE = [

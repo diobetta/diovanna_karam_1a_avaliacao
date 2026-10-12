@@ -1,5 +1,11 @@
 from django.db import models
 
+# DIOVANNA
+# ERRO ENCONTRADO: o código utiliza timezone.now, mas timezone não foi importado
+# CORRIGIDO: importando timezone para permitir o uso
+
+from django.utils import timezone
+
 
 class Professor(models.Model):
     nome = models.CharField(max_length=30)
@@ -21,7 +27,10 @@ class Aluno(models.Model):
     sobrenome = models.CharField(max_length=50)
     email = models.EmailField()
     telefone = models.CharField(max_length=15)
-    matricula = models.IntegerField()
+    # DIOVANNA:
+    # ERRO ENCONTRADO: matrícula estava definida como IntegerField, mas é um identificador
+    # CORREÇÃO: alterado para CharField com limite de 10 caracteres
+    matricula = models.CharField(max_length=10)
     criacao_data = models.DateTimeField(default=timezone.now)
     observacao = models.TextField(blank=True)
     ativo = models.BooleanField(default=True)

@@ -1,0 +1,14 @@
+# Banco local do Django
+db.sqlite3
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Variaveis do ambiente]
+.env

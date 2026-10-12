@@ -3,7 +3,10 @@ from portal import models
 
 @admin.register(models.Professor)
 class ProfessorAdmin(admin.ModelAdmin):
-    list_display = ('id', 'nome', 'email', 'telefone', 'especialidade', 'ativo',)
+    # DIOVANNA
+    # ERRO ENCONTRADO: list_display utilizava o campo espacialidade, que não existe no model Professor
+    # CORREÇÃO: substituído por 'disciplina'
+    list_display = ('id', 'nome', 'email', 'telefone', 'disciplina', 'ativo',)
 
 @admin.register(models.Aluno)
 class AlunoAdmin(admin.ModelAdmin):
